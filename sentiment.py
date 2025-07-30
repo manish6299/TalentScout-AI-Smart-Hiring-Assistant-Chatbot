@@ -1,11 +1,7 @@
-import os
-os.environ["TRANSFORMERS_NO_TF"] = "1"  # ⛔ Disable TensorFlow completely
-
-from transformers import pipeline
-
-# Load model once (global)
-sentiment_pipeline = pipeline("sentiment-analysis")
+from textblob import TextBlob
 
 def analyze_sentiment(text):
-    result = sentiment_pipeline(text)[0]
-    return result['label'].lower(), result['score']
+    blob = TextBlob(text)
+    polarity = blob.sentiment.polarity
+    label = "POSITIVE" if polarity > 0 else "NEGATIVE" if polarity < 0 else "NEUTRAL"
+    return label, polarity
