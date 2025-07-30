@@ -62,7 +62,7 @@ streamlit run app.py
 ### Main Libraries Used
 
 - **`streamlit`**: UI and session control
-- **`transformers`**: Sentiment analysis via Hugging Face
+- **`textblob`**: Sentiment analysis via Hugging Face
 - **`requests`**: For LLM API calls
 - **`sqlite3`**: Persistent storage of candidate info
 - **`dotenv`**: Managing API keys
@@ -116,7 +116,7 @@ Create a `requirements.txt` file with the following dependencies:
 
 ```txt
 streamlit>=1.28.0
-transformers>=4.21.0
+textblob
 torch>=1.12.0
 requests>=2.28.0
 python-dotenv>=0.19.0
@@ -149,3 +149,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Happy Hiring! 🎯**
+link  (https://talentscout-ai-smart-hiring-assistant-chatbot-6pkeprweitfkqbva.streamlit.app/)
