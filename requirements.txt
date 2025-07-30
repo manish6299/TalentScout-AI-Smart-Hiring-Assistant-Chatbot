@@ -1,7 +1,5 @@
 streamlit
 openai
 python-dotenv
-streamlit
 transformers
 torch
-sqlite3; sys_platform != 'win32'  # optional, for Linux-based
